@@ -365,27 +365,27 @@ jobs:
 
       - run: |
           cat > release.txt << 'EOF'
-          ## 我应该下载哪个版本？
+          ## Which version should I download?
 
           ### MacOS
-          - MacOS intel芯片: x64.dmg
-          - MacOS apple M芯片: aarch64.dmg
+          - MacOS Intel Chip: x64.dmg
+          - MacOS Apple Silicon (M-series): aarch64.dmg
 
           ### Linux
-          - Linux 64位: amd64.deb/amd64.rpm
-          - Linux arm64 architecture: arm64.deb/aarch64.rpm
-          - Linux armv7架构: armhf.deb/armhfp.rpm
+          - Linux 64-bit: amd64.deb/amd64.rpm
+          - Linux ARM64 architecture: arm64.deb/aarch64.rpm
+          - Linux ARMv7 architecture: armhf.deb/armhfp.rpm
 
-          ### Windows (不再支持Win7)
-          #### 正常版本(推荐)
-          - 64位: x64-setup.exe
-          - arm64架构: arm64-setup.exe
-          #### 便携版问题很多不再提供
-          #### 内置Webview2版(体积较大，仅在企业版系统或无法安装webview2时使用)
-          - 64位: x64_fixed_webview2-setup.exe
-          - arm64架构: arm64_fixed_webview2-setup.exe
+          ### Windows (Windows 7 no longer supported)
+          #### Standard Version (Recommended)
+          - 64-bit: x64-setup.exe
+          - ARM64 architecture: arm64-setup.exe
+          #### Portable version is no longer provided due to multiple issues
+          #### Built-in Webview2 Version (Larger size, only use for Enterprise systems or when unable to install webview2)
+          - 64-bit: x64_fixed_webview2-setup.exe
+          - ARM64 architecture: arm64_fixed_webview2-setup.exe
 
-          Created at  ${{ env.BUILDTIME }}.
+          Created at ${{ env.BUILDTIME }}.
           EOF
 
       - name: Upload Release

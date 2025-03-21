@@ -29,7 +29,7 @@
   "identifier": "io.github.errorx.errorx",
   "plugins": {
     "updater": {
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDRFODJGMjgyMkE1MjVGN0YKUldSL1gxSXFndktDVHJDdEVSajYycmRSV2JybUU0Vy9VSnZnK3h6b0Z1ZDNyL01lb3VndTNEY1QK",
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENDNzcxNUFEQUVDMzE1MDcKUldRSEZjT3VyUlYzek5CaXlaUWM4RElkWkptRXlGSmVxV1ljQnNoTEtPWTJUZ1ZoUmwwU1NnUTAK",
       "endpoints": [
         "https://download.clashverge.dev/https://github.com/FakeErrorX/errorx/releases/download/updater/update-proxy.json",
         "https://github.com/FakeErrorX/errorx/releases/download/updater/update.json",

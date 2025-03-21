@@ -361,8 +361,9 @@ jobs:
       - name: Submit to Winget
         uses: vedantmgoyal9/winget-releaser@main
         with:
-          identifier: ClashVergeRev.ClashVergeRev
+          identifier: ErrorX.ErrorX
           version: ${{env.VERSION}}
           release-tag: v${{env.VERSION}}
           installers-regex: '_(arm64|x64|x86)-setup\.exe$'
           token: ${{ secrets.WINGET_TOKEN  }}
+
