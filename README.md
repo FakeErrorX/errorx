@@ -1,7 +1,7 @@
-# <h1 align="center">
+<h1 align="center">
   <img src="./src-tauri/icons/icon.png" alt="Clash" width="128" />
   <br>
-  Continuation of <a href="https://github.com/zzzgydi/clash-verge">Clash Verge</a>
+  Continuation of <a href="https://github.com/FakeErrorX/ErrorX">ErrorX</a>
   <br>
 </h1>
 
@@ -17,28 +17,15 @@ A Clash Meta GUI based on <a href="https://github.com/tauri-apps/tauri">Tauri</a
 
 ## Install
 
-Go to the [release page](https://github.com/clash-verge-rev/clash-verge-rev/releases) to download the corresponding installation package.
+Go to the [release page](https://github.com/FakeErrorX/ErrorX/releases) to download the corresponding installation package.
 Supports Windows (x64/x86), Linux (x64/arm64) and macOS 10.15+ (intel/apple).
 
-### For installation instructions and FAQ, please visit the [documentation page](https://clash-verge-rev.github.io/): [Doc](https://clash-verge-rev.github.io/)
+### For installation instructions and FAQ, please visit the [documentation page](https://errorx.me/): [Doc](https://errorx.me/)
 
 ---
 
-### Telegram Channel: [@clash_verge_rev](https://t.me/clash_verge_re)
+### Telegram Channel: [@ErrorX_BD](https://t.me/ErrorX_BD)
 
-## Promotion
-
-[DoggyGo VPN — Technical VPN Service](https://verge.dginv.click/#/register?code=oaxsAGo6)
-
-- High-performance VPN service with free trial, promotional packages, streaming media unblocking, and first global support for Hysteria protocol
-- Register with Clash Verge exclusive invitation link for 3 days free trial with 1GB daily traffic: [Register Here](https://verge.dginv.click/#/register?code=oaxsAGo6)
-- Clash Verge exclusive 20% discount code: verge20 (limited to 500 uses)
-- Promotional package starts at $2.20/month, 160GB traffic, additional 20% off for annual subscription
-- Overseas team management, high commission rates up to 50%
-- Cluster load balancing design, high-speed dedicated lines (backward compatible), ultra-low latency, peak hour resistant, 4K instant streaming
-- First global VPN service with Hysteria protocol, now featuring the faster `Hysteria2` protocol (Best paired with Clash Verge client)
-- Unlocks streaming services and ChatGPT
-- Official website: [DoggyGo.com](https://verge.dginv.click/#/register?code=oaxsAGo6)
 
 ## Features
 
@@ -52,11 +39,11 @@ Supports Windows (x64/x86), Linux (x64/arm64) and macOS 10.15+ (intel/apple).
 
 ### FAQ
 
-Refer to [Doc FAQ Page](https://clash-verge-rev.github.io/faq/windows.html)
+Refer to [Doc FAQ Page](https://errorx.me/)
 
 ### Donation
 
-[Support Clash Verge Rev Development](https://github.com/sponsors/clash-verge-rev)
+[Support ErrorX Development](https://github.com/sponsors/FakeErrorX)
 
 ## Development
 
