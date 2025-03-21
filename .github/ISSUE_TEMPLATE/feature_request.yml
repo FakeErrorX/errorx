@@ -1,0 +1,44 @@
+name:  Feature request
+title: "[Feature] "
+description: Propose your feature request
+labels: ["enhancement"]
+type: "Feature"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        2. Please make sure there is no similar issue in the [existing issues](https://github.com/FakeErrorX/ErrorX/issues?q=is%3Aissue), otherwise please discuss under the existing issue
+        3. Please be sure to fill in a concise and clear title for the issue so that others can quickly search
+        4. Please be sure to download the [Alpha](https://github.com/clash-verge-rev/clash-verge-rev/releases/tag/alpha) version for testing to ensure that the function has not been implemented
+        5. Please describe the problem in detail according to the template specification, otherwise the issue will be closed
+        1. Please make sure you have read the [ErrorX official documentation](https://errorx.me) to confirm that the software does not have similar functions
+        2. Please make sure there is no similar issue in the [existing issues](https://github.com/FakeErrorX/ErrorX/issues?q=is%3Aissue), otherwise please discuss under the existing issue
+        3. Please be sure to fill in a concise and clear title for the issue so that others can quickly search
+        4. Please be sure to download the [Alpha](https://github.com/FakeErrorX/ErrorX/releases/tag/alpha) version for testing to ensure that the function has not been implemented
+        5. Please describe the problem in detail according to the template specification, otherwise the issue will be closed
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature description
+      description: A clear and concise description of what the feature is
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Use case
+      description: Please describe the use case of your feature request
+    validations:
+      required: true
+  - type: checkboxes
+    id: os-labels
+    attributes:
+      label: Target OS
+      description: Please select the operating system(s) for this feature request (select at least one)
+      options:
+        - label: windows
+        - label: macos
+        - label: linux
+    validations:
+      required: true

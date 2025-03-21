@@ -1,0 +1,59 @@
+{
+  "version": "1.1.0",
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "bundle": {
+    "active": true,
+    "longDescription": "ErrorX",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "resources": ["resources", "resources/locales/*"],
+    "publisher": "ErrorX",
+    "externalBin": ["sidecar/errorx-mihomo", "sidecar/errorx-mihomo-alpha"],
+    "copyright": "GNU General Public License v3.0",
+    "category": "DeveloperTool",
+    "shortDescription": "ErrorX",
+    "createUpdaterArtifacts": true
+  },
+  "build": {
+    "beforeBuildCommand": "pnpm run web:build",
+    "frontendDist": "../dist",
+    "beforeDevCommand": "pnpm run web:dev",
+    "devUrl": "http://localhost:3000/"
+  },
+  "productName": "ErrorX",
+  "identifier": "io.github.errorx.errorx",
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDRFODJGMjgyMkE1MjVGN0YKUldSL1gxSXFndktDVHJDdEVSajYycmRSV2JybUU0Vy9VSnZnK3h6b0Z1ZDNyL01lb3VndTNEY1QK",
+      "endpoints": [
+        "https://download.clashverge.dev/https://github.com/FakeErrorX/errorx/releases/download/updater/update-proxy.json",
+        "https://github.com/FakeErrorX/errorx/releases/download/updater/update.json",
+        "https://download.clashverge.dev/https://github.com/FakeErrorX/errorx/releases/download/updater-alpha/update-alpha-proxy.json",
+        "https://github.com/FakeErrorX/errorx/releases/download/updater-alpha/update-alpha.json"
+      ],
+      "windows": {
+        "installMode": "basicUi"
+      }
+    },
+    "deep-link": {
+      "desktop": {
+        "schemes": ["clash", "errorx"]
+      }
+    }
+  },
+  "app": {
+    "security": {
+      "capabilities": ["desktop-capability", "migrated"],
+      "assetProtocol": {
+        "scope": ["$APPDATA/**", "$RESOURCE/../**", "**"],
+        "enable": true
+      },
+      "csp": null
+    }
+  }
+}

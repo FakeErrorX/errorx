@@ -1,0 +1,68 @@
+name: Bug report
+title: "[BUG] "
+description:Report the issue you are experiencing
+labels: ["bug"]
+type: "Bug"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Before submitting the issue, please make sure of the following checklist:
+        1. Please make sure you have read the [ErrorX official documentation](https://errorx.me) and [FAQ](https://errorx.me)
+        2. Please make sure there is no similar issue in the [existing issues](https://github.com/FakeErrorX/errorx/issues?q=is%3Aissue), otherwise please discuss under the existing issue
+        3. Please be sure to fill in a concise and clear title for the issue so that others can quickly search
+        4. Please be sure to download the [Alpha](https://github.com/FakeErrorX/errorx/releases/tag/alpha) version for testing to ensure that the problem still exists
+        5. Please describe the problem in detail according to the template specification, otherwise the issue will be closed
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: Describe the problem you encountered in detail and clearly, and provide screenshots
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Verge Version
+      description: Please provide the specific version of Verge. If it is an alpha version, please indicate the download time (accurate to hours and minutes)
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: To Reproduce
+      description: Please provide the steps to reproduce the behavior
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: OS
+      options:
+        - Windows
+        - Linux
+        - MacOS
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: OS Version
+      description: Please provide your OS version, for Linux, please also provide the desktop environment and window system
+    validations:
+      required: true
+  - type: checkboxes
+    id: os-labels
+    attributes:
+      label: OS Labels
+      description: Please select the affected operating system(s) (select at least one)
+      options:
+        - label: windows
+        - label: macos
+        - label: linux
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Log
+      description: Please provide a complete or relevant part of the Debug log (please adjust the "Log level" to debug in "Software left menu" -> "Settings" -> "Log level". If there is a Verge error, please adjust "Miscellaneous settings" -> "app log level" to trace, and restart Verge to take effect. The log file is under "Software left menu" -> "Settings" -> "Log directory")
+    validations:
+      required: true
