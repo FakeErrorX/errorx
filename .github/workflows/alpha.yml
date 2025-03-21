@@ -397,3 +397,45 @@ jobs:
           prerelease: true
           token: ${{ secrets.GITHUB_TOKEN }}
           generate_release_notes: true
+
+      - name: Create winget manifest
+        if: matrix.target == 'x86_64-pc-windows-msvc'
+        run: |
+          $version = (Get-Content package.json | ConvertFrom-Json).version
+          $sha256 = (Get-FileHash "src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/ErrorX_$version-x64-setup.exe" -Algorithm SHA256).Hash.ToLower()
+          
+          mkdir manifests
+          cd manifests
+          
+          @"
+          Id: ErrorX.ErrorX
+          Version: $version
+          Name: ErrorX
+          Publisher: FakeErrorX
+          License: MIT
+          Description: ErrorX
+          Homepage: https://github.com/FakeErrorX/errorx
+          Tags:
+            - error
+            - tracking
+            - monitoring
+            - debugging
+          InstallerType: nullsoft
+          Installers:
+            - Architecture: x64
+              Scope: user
+              InstallerUrl: https://github.com/FakeErrorX/errorx/releases/download/alpha/ErrorX_$version-x64-setup.exe
+              InstallerSha256: $sha256
+              InstallerSwitches:
+                Custom: /CURRENTUSER
+          ManifestVersion: 1.4.0
+          "@ > ErrorX.ErrorX.yaml
+
+      - name: Submit winget manifest
+        if: matrix.target == 'x86_64-pc-windows-msvc'
+        uses: vedantmgoyal2009/winget-releaser@v2
+        with:
+          identifier: ErrorX.ErrorX
+          version: ${{ env.VERSION }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fork-user: ${{ github.repository_owner }}
